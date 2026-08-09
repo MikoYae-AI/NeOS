@@ -64,7 +64,7 @@ Snapshots are typically created automatically during system updates."
             fi
             rm -f "$TEMP_FILE"
         else
-            kdialog --icon dialog-information --title "Snapshot Error" --error "Snapshot management tool (snapper) is not installed."
+            exec kdialog --icon dialog-information --title "Snapshot Error" --error "Snapshot management tool (snapper) is not installed."
         fi
         ;;
 esac
