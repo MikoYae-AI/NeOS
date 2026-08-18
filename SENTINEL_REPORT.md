@@ -145,3 +145,26 @@ Autoupdate script requires execution as root, maintaining its inherent privilege
 ## Acknowledge Continued Phase 4 Validation
 **Status**: Completed
 **Findings**: Acknowledged the continued Strategic Pause for Phase 4 Validation. No new feature development required from Architect.
+
+## 2026-08-18 - Deepest Architectural & Security Audit (Sovereign Core)
+### Risks found
+- **Manifest Desynchronization (CWE-436)**: `profile/airootfs/etc/calamares/neos-overlay.txt` had drifted from `profile/airootfs`, omitting `50-neos-packagekit.rules`, `neos-operations-hub`, and `neos-hardware-setup` from installed target overlays.
+- **Profiledef Access Control (CWE-732)**: `profile/profiledef.sh` omitted permission declarations for `neos-operations-hub` and `neos-hardware-setup`.
+- **Insecure Temporary File & Volatility (CWE-377 / CWE-59)**: `neos-welcome-app` stored telemetry state via `os.rename` in `/tmp`, vulnerable to sticky-bit race conditions and reboot volatility.
+- **Snapper Hook Fault Tolerance (CWE-754)**: `49-neos-snapshot-pre.hook` and `99-neos-snapshot-post.hook` lacked presence checks for snapper config, causing potential transaction failures on non-Btrfs installations.
+- **Signal Lifecycle & Cleanup (CWE-459)**: `neos-welcome` lacked signal trap handlers for installer temporary logs.
+
+### Fixes applied
+- Regenerated `neos-overlay.txt` and `neos-packages.txt` via `tools/gen-manifests.sh`.
+- Added explicit `0:0:755` permissions for all binaries in `profile/profiledef.sh`.
+- Refactored `neos-welcome-app` to persist telemetry state into user-scoped config space (`~/.config/neos/telemetry-optin`) via safe atomic replacement with mode `0600`.
+- Added defensive conditional guards in pre/post pacman snapshot hooks.
+- Added `trap 'rm -f "$LOG"' EXIT INT TERM` and strict `export PATH` in `neos-welcome`.
+
+### Remaining attack surface
+- None identified. All 34 verification test suites passing.
+
+### Severity summary
+- **Severity**: MEDIUM (Mitigated Configuration Drift & Permission Boundaries)
+- **Status**: Fixed
+
