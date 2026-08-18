@@ -31,8 +31,8 @@ NeOS leverages and extends several key projects within the Arch Linux ecosystem:
 | 🛠️ **[ALCI](https://github.com/arch-linux-calamares-installer)** | Base installer framework and Calamares integration. |
 | ⚡ **[Chaotic-AUR](https://github.com/chaotic-aur)** | High-performance kernels (Zen) and pre-compiled packages. |
 | 🧠 **[NeoCortex](https://github.com/uthsarad/NeoCortex)** | Local-first, capability-gated sovereign AI intelligence layer. |
-| 👑 **[Nimuthu Ganegoda](https://github.com/NimuthuGanegoda)** | Creator & Systems Architect. |
-| ⚡ **[Uthsara](https://github.com/uthsarad)** | Core Maintainer & Repository Lead. |
+| 👑 **[Uthsara](https://github.com/uthsarad)** | Creator & Lead Systems Architect. |
+| ⚡ **[Nimuthu Ganegoda](https://github.com/NimuthuGanegoda)** | Core Contributor & Systems Engineer. |
 | 🦊 **[Miko Yae](https://github.com/MikoYae-AI)** | Core Collaborator, Autonomous Tooling & Systems Engineering. |
 | 🛡️ **[Sovereign Core](https://github.com/NimuthuGanegoda/Sanctuary-of-Eternity)** | Architectural guidance and security policy foundations. |
 | 👨‍💻 **[NeOS Team](https://github.com/uthsarad/NeOS/graphs/contributors)** | Collaborative Development & Architectural Review. |
