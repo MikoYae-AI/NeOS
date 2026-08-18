@@ -35,4 +35,6 @@ file_permissions=(
   ["/usr/local/bin/neos-vm-graphics"]="0:0:755"
   ["/usr/local/bin/neos-accessibility"]="0:0:755"
   ["/usr/local/bin/neos-secureboot-setup"]="0:0:755"
+  ["/usr/local/bin/neos-operations-hub"]="0:0:755"
+  ["/usr/local/bin/neos-hardware-setup"]="0:0:755"
 )

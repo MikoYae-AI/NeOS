@@ -121,6 +121,10 @@ pacman-contrib
 rsync
 sbctl
 mokutil
+discover
+packagekit-qt6
+flatpak
+fwupd
 # --- developer languages and frameworks (installed-system only) ---
 nodejs
 npm

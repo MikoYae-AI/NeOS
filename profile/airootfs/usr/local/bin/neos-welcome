@@ -6,7 +6,10 @@
 # XWayland (QT_QPA_PLATFORM=xcb). Any failure is surfaced to the user via
 # kdialog instead of failing silently.
 
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
 LOG="$(mktemp "${TMPDIR:-/tmp}/neos-installer.XXXXXX")"
+trap 'rm -f "$LOG"' EXIT INT TERM
 
 notify_error() {
     local msg="$1"

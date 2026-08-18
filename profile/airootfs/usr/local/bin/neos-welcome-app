@@ -266,15 +266,31 @@ class NeosWelcome(QWidget):
             y = (geo.height() - self.height()) // 2
             self.move(x, y)
     def closeEvent(self, event):
-        # Securely save telemetry state using tempfile to prevent CWE-59
+        # Securely save telemetry state to user config and /tmp
         try:
             state = "1" if self.telemetry_checkbox.isChecked() else "0"
-            import tempfile, os
-            fd, tmp_file = tempfile.mkstemp(prefix='neos-telemetry.', dir='/tmp')
-            with os.fdopen(fd, 'w') as f:
-                f.write(state + "\n")
-            os.chmod(tmp_file, 0o644)
-            os.rename(tmp_file, "/tmp/neos-telemetry-optin")
+            import tempfile, os, pathlib
+
+            # 1. Save to persistent user config space
+            config_dir = os.environ.get("XDG_CONFIG_HOME", os.path.expanduser("~/.config"))
+            neos_dir = os.path.join(config_dir, "neos")
+            os.makedirs(neos_dir, exist_ok=True)
+            user_optin = os.path.join(neos_dir, "telemetry-optin")
+            if not os.path.islink(user_optin):
+                fd, tmp_file = tempfile.mkstemp(prefix='.telemetry.', dir=neos_dir)
+                with os.fdopen(fd, 'w') as f:
+                    f.write(state + "\n")
+                os.chmod(tmp_file, 0o600)
+                os.replace(tmp_file, user_optin)
+
+            # 2. Save to /tmp/neos-telemetry-optin safely
+            tmp_target = "/tmp/neos-telemetry-optin"
+            if not os.path.islink(tmp_target):
+                fd, tmp_file = tempfile.mkstemp(prefix='neos-telemetry.', dir='/tmp')
+                with os.fdopen(fd, 'w') as f:
+                    f.write(state + "\n")
+                os.chmod(tmp_file, 0o644)
+                os.replace(tmp_file, tmp_target)
         except Exception as e:
             import sys
             print(f"Error saving telemetry state: {e}", file=sys.stderr)
