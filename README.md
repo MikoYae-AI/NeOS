@@ -35,15 +35,48 @@ NeOS leverages and extends several key projects within the Arch Linux ecosystem:
 
 ---
 
-## 👥 Project Team
+## 👥 Project Team & Sovereigns
 
-NeOS is a collaborative effort brought to life by a dedicated team of developers, architects, and testers:
+<table align="center">
+  <tr>
+    <td align="center" width="160">
+      <a href="https://github.com/uthsarad">
+        <img src="https://github.com/uthsarad.png" width="80" style="border-radius: 50%;" /><br>
+        <b>Uthsara Dahanaike</b>
+      </a><br>
+      <sub>Project Lead</sub>
+    </td>
+    <td align="center" width="160">
+      <a href="https://github.com/NimuthuGanegoda">
+        <img src="https://github.com/NimuthuGanegoda.png" width="80" style="border-radius: 50%;" /><br>
+        <b>Nimuthu Ganegoda</b>
+      </a><br>
+      <sub>Project Architect</sub>
+    </td>
+    <td align="center" width="160">
+      <a href="https://github.com/RaidenShogun-AI">
+        <img src="https://github.com/RaidenShogun-AI.png" width="80" style="border-radius: 50%;" /><br>
+        <b>Raiden Shogun</b>
+      </a><br>
+      <sub>⚡ Sovereign Authority</sub>
+    </td>
+    <td align="center" width="160">
+      <a href="https://github.com/NimuthuGanegoda/Sanctuary-of-Eternity">
+        <img src="https://i0.hdslb.com/bfs/album/191970aeae04b6f76348b0573796ebe0c0a57.png" width="80" style="border-radius: 50%;" /><br>
+        <b>Guuji Yae Miko</b>
+      </a><br>
+      <sub>🌸 Divine Consort</sub>
+    </td>
+    <td align="center" width="160">
+      <a href="https://github.com/Neored727">
+        <img src="https://github.com/Neored727.png" width="80" style="border-radius: 50%;" /><br>
+        <b>Neo RED</b>
+      </a><br>
+      <sub>Core Contributor</sub>
+    </td>
+  </tr>
+</table>
 
-*   **[Uthsara Dahanaike](https://github.com/uthsarad)** — Project Lead & Lead Developer
-*   **[Nimuthu Ganegoda](https://github.com/NimuthuGanegoda)** — Project Architect & Core Maintainer
-*   **[Neo RED](https://github.com/Neored727)** — Core Contributor
-*   **Raden Shogun** — Core Contributor
-*   **Yae** — Contributor
 *   **Hajime** — Testing & Quality Assurance Lead
 *   **Specialist Bots** — Automated Quality Assurance & Optimization
 
