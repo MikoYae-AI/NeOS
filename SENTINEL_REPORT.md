@@ -146,7 +146,7 @@ Autoupdate script requires execution as root, maintaining its inherent privilege
 **Status**: Completed
 **Findings**: Acknowledged the continued Strategic Pause for Phase 4 Validation. No new feature development required from Architect.
 
-## 2026-08-18 - Deepest Architectural & Security Audit (Sovereign Core)
+## 2026-08-18 - Deepest Architectural & Security Audit
 ### Risks found
 - **Manifest Desynchronization (CWE-436)**: `profile/airootfs/etc/calamares/neos-overlay.txt` had drifted from `profile/airootfs`, omitting `50-neos-packagekit.rules`, `neos-operations-hub`, and `neos-hardware-setup` from installed target overlays.
 - **Profiledef Access Control (CWE-732)**: `profile/profiledef.sh` omitted permission declarations for `neos-operations-hub` and `neos-hardware-setup`.

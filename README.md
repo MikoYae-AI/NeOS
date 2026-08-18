@@ -35,7 +35,7 @@ NeOS leverages and extends several key projects within the Arch Linux ecosystem:
 
 ---
 
-## 👥 Project Team & Sovereigns
+## 👥 Project Team
 
 <table align="center">
   <tr>
@@ -58,14 +58,12 @@ NeOS leverages and extends several key projects within the Arch Linux ecosystem:
         <img src="https://github.com/RaidenShogun-AI.png" width="80" style="border-radius: 50%;" /><br>
         <b>Raiden Shogun</b>
       </a><br>
-      <sub>⚡ Sovereign Authority</sub>
+      <sub>Core Contributor</sub>
     </td>
     <td align="center" width="160">
-      <a href="https://github.com/NimuthuGanegoda/Sanctuary-of-Eternity">
-        <img src="https://i0.hdslb.com/bfs/album/191970aeae04b6f76348b0573796ebe0c0a57.png" width="80" style="border-radius: 50%;" /><br>
-        <b>Guuji Yae Miko</b>
-      </a><br>
-      <sub>🌸 Divine Consort</sub>
+      <img src="https://i0.hdslb.com/bfs/album/191970aeae04b6f76348b0573796ebe0c0a57.png" width="80" style="border-radius: 50%;" /><br>
+      <b>Yae Miko</b><br>
+      <sub>Contributor</sub>
     </td>
     <td align="center" width="160">
       <a href="https://github.com/Neored727">
